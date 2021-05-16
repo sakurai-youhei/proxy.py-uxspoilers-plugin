@@ -31,7 +31,7 @@ host target-device {
 }
 ```
 
-Or you may configure your browser's PAC URL with `http://ip-of-your-proxy:8899/wpad.dat`.
+Or you may configure your browser's [PAC](https://en.wikipedia.org/wiki/Proxy_auto-config) with `http://ip-of-your-proxy:8899/wpad.dat` manually.
 
 ## Installation
 
