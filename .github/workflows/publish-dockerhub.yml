@@ -1,0 +1,61 @@
+name: Publish to DockerHub
+
+on:
+  push:
+    # Publish `v1.2.3` tags as releases.
+    tags:
+      - v*
+
+env:
+  # TODO: Change variable to your image's name.
+  IMAGE_NAME: image
+
+jobs:
+  # Run tests.
+  # See also https://docs.docker.com/docker-hub/builds/automated-testing/
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run tests
+        run: |
+          if [ -f docker-compose.test.yml ]; then
+            docker-compose --file docker-compose.test.yml build
+            docker-compose --file docker-compose.test.yml run sut
+          else
+            docker build . --file Dockerfile
+          fi
+
+  # Push image to DockerHub.
+  # See also https://docs.github.com/en/free-pro-team@latest/actions/guides/publishing-docker-images#publishing-images-to-docker-hub
+  push:
+    name: Push Docker image to Docker Hub
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v2
+      - name: Push to Docker Hub
+        uses: docker/build-push-action@v1
+        with:
+          username: sakuraiyouhei
+          password: ${{ secrets.DOCKER_PASSWORD }}
+          repository: sakuraiyouhei/proxy.py-uxspoilers-plugin
+          tags: latest
+          tag_with_ref: true
+
+# https://github.com/peter-evans/dockerhub-description/issues/10
+# https://github.com/peter-evans/dockerhub-description/issues/24
+# https://github.com/docker/roadmap/issues/115
+#  dockerHubDescription:
+#    runs-on: ubuntu-latest
+#    steps:
+#    - uses: actions/checkout@v2
+#
+#    - name: Docker Hub Description
+#      uses: peter-evans/dockerhub-description@v2
+#      with:
+#        username: sakuraiyouhei
+#        password: ${{ secrets.DOCKER_PASSWORD }}
+#        repository: sakuraiyouhei/shukujitsu
