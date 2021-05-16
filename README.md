@@ -2,7 +2,7 @@
 
 A plugin for [proxy.py](https://pypi.org/project/proxy.py/) to spoil UX of web browsing
 
-You can spoil User Experience of e.g. YouTube with a combination of [proxy.py](https://pypi.org/project/proxy.py/) plus [proxy.py-uxspoilers-plugin](https://pypi.org/project/proxy.py-uxspoilers-plugin/) and a kind of following PAC/[WPAD](https://en.wikipedia.org/wiki/Web_Proxy_Auto-Discovery_Protocol) file.
+You can spoil User Experience of e.g. YouTube with a combination of [proxy.py](https://pypi.org/project/proxy.py/) plus [proxy.py-uxspoilers-plugin](https://pypi.org/project/proxy.py-uxspoilers-plugin/) and a kind of following [PAC](https://en.wikipedia.org/wiki/Proxy_auto-config)/[WPAD](https://en.wikipedia.org/wiki/Web_Proxy_Auto-Discovery_Protocol) file.
 
 ```javascript
 function FindProxyForURL(url, host)
@@ -31,7 +31,7 @@ host target-device {
 }
 ```
 
-Or you can configure your browser's PAC URL with `http://ip-of-your-proxy:8899/wpad.dat`.
+Or you may configure your browser's PAC URL with `http://ip-of-your-proxy:8899/wpad.dat`.
 
 ## Installation
 
