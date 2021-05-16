@@ -31,12 +31,12 @@ host target-device {
 }
 ```
 
-Or you can configure `http://ip-of-your-proxy:8899/wpad.dat` to your browser as a PAC URL .
+Or you can configure your browser's PAC URL with `http://ip-of-your-proxy:8899/wpad.dat`.
 
 ## Installation
 
-[![PyPI Downloads      ](https://img.shields.io/pypi/dm/proxy.py-uxspoilers-plugin.svg)](https://pypi.org/project/proxy.py-uxspoilers-plugin/)
 [![PyPI Version        ](https://img.shields.io/pypi/v/proxy.py-uxspoilers-plugin.svg)](https://pypi.org/project/proxy.py-uxspoilers-plugin/)
+[![PyPI Downloads      ](https://img.shields.io/pypi/dm/proxy.py-uxspoilers-plugin.svg)](https://pypi.org/project/proxy.py-uxspoilers-plugin/)
 
 ```console
 $ pip3 install proxy.py-uxspoilers-plugin
