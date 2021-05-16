@@ -18,7 +18,7 @@ function FindProxyForURL(url, host)
 Run your proxy server like this:
 
 ```console
-$ proxy --hostname=0.0.0.0 --pac-file /path/to/wpad.dat --plugin uxspoilers.FixedRustyPumpPlugin --pause-seconds 3
+proxy --hostname=0.0.0.0 --pac-file /path/to/wpad.dat --plugin uxspoilers.FixedRustyPumpPlugin --pause-seconds 3
 ```
 
 Your `/etc/dhcp/dhcpd.conf` should look like this:
@@ -39,8 +39,8 @@ Or you may configure your browser's PAC URL with `http://ip-of-your-proxy:8899/w
 [![PyPI Downloads      ](https://img.shields.io/pypi/dm/proxy.py-uxspoilers-plugin.svg)](https://pypi.org/project/proxy.py-uxspoilers-plugin/)
 
 ```console
-$ pip3 install proxy.py-uxspoilers-plugin
-$ proxy --help --plugin uxspoilers.RandomRustyPumpPlugin
+pip3 install proxy.py-uxspoilers-plugin
+proxy --help --plugin uxspoilers.RandomRustyPumpPlugin
 ```
 
 ### Docker
@@ -49,5 +49,5 @@ $ proxy --help --plugin uxspoilers.RandomRustyPumpPlugin
 [![Image Size  ](https://img.shields.io/docker/image-size/sakuraiyouhei/proxy.py-uxspoilers-plugin)](https://hub.docker.com/r/sakuraiyouhei/proxy.py-uxspoilers-plugin/)
 
 ```console
-$ docker run -it sakuraiyouhei/proxy.py-uxspoilers-plugin --help --plugin uxspoilers.RandomRustyPumpPlugin
+docker run -it sakuraiyouhei/proxy.py-uxspoilers-plugin --help --plugin uxspoilers.RandomRustyPumpPlugin
 ```
