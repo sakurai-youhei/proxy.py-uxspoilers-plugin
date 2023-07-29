@@ -3,4 +3,5 @@ flake8
 hacking
 mock
 python_wrap_cases
+six
 wheel
