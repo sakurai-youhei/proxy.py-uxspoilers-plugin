@@ -12,7 +12,7 @@ from proxy.http.parser import HttpParser
 from proxy.http.proxy import HttpProxyBasePlugin
 
 
-__version__ = "2021.5.18"
+__version__ = "2021.5.18.post1"
 
 
 flags.add_argument('--pause-seconds',
