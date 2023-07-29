@@ -37,7 +37,7 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: sakuraiyouhei/proxy.py-uxspoilers-plugin/app:latest
+          tags: sakuraiyouhei/proxy.py-uxspoilers-plugin:latest
 
   # Run tests.
   # See also https://docs.docker.com/docker-hub/builds/automated-testing/
