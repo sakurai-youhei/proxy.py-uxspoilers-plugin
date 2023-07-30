@@ -15,3 +15,6 @@ COPY --from=build-env /src/dist /tmp/dist
 RUN pip3 install --no-cache-dir proxy.py==2.3.1 && \
     pip3 install --no-cache-dir /tmp/dist/*.whl && \
     rm -rf /tmp/dist/
+EXPOSE 8899/tcp
+ENTRYPOINT ["proxy"]
+CMD ["--hostname=0.0.0.0"]
